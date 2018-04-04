@@ -53,6 +53,7 @@ load(
 load(
     "//skylib:zip.bzl",
     _gzip = "gzip",
+    _zip_tools = "tools",
 )
 load(
     "//skylib:label.bzl",
@@ -298,7 +299,7 @@ _attrs = dict(_layer.attrs.items() + {
         executable = True,
         allow_files = True,
     ),
-}.items() + _hash_tools.items() + _layer_tools.items())
+}.items() + _hash_tools.items() + _layer_tools.items() + _zip_tools.items())
 
 _outputs = {
     "out": "%{name}.tar",
