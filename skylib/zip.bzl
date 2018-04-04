@@ -34,10 +34,10 @@ def gunzip(ctx, artifact):
   return out
 
 tools = {
-  "gzip": attr.label(
-    allow_files = True,
-    cfg = "host",
-    default = Label("@gzip//:gzip"),
-    executable = True,
-  ),
+    "gzip": attr.label(
+        allow_files = True,
+        cfg = "host",
+        default = Label("@gzip//:gzip"),
+        executable = True,
+    ),
 }

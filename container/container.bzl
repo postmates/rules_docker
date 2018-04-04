@@ -55,8 +55,8 @@ def _local_tool(repository_ctx):
   )
 
 local_tool = repository_rule(
-  implementation = _local_tool,
-  local = True,
+    local = True,
+    implementation = _local_tool,
 )
 
 def repositories():
